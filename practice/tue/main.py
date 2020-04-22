@@ -1,13 +1,12 @@
 class Sequence:
     def __init__(self, MESSAGE):
-        self.message = MESSAGE
+        self.__message = MESSAGE
 
-    def analyze(self):
-        answer = self.message.count('о') 
-        return answer 
+    def __analyze(self):
+        return len(max(self.__message.split('р')))  
 
     def get_answer(self):
-        return self.analyze() 
+        return self.__analyze() 
 
 
 
