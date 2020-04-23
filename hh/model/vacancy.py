@@ -26,6 +26,8 @@ class Vacancy:
 
     def __str__(self):
         return "{} {} {}".format(self.__id , self.__title, self.__salary)
+
+        
  
 def average_salary(db):
     total_salary = 0
