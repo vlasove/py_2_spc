@@ -25,7 +25,12 @@ def average_salary(db):
     return total_salary / len(db)
 
 def std_salary(db):
-    pass 
+    avg = average_salary(db)
+    D = 0
+    for v in db:
+        D += (v.get_salary() - avg) ** 2
+    std = (D / len(db)) ** 0.5
+    return std  
 
 
 print(database, len(database))
@@ -36,3 +41,4 @@ v4 = Vacancy("golang", 22)
 v4 = Vacancy("c++", 14)
 
 print("Average salary:", average_salary(database))
+print("Std salary:", std_salary(database))
