@@ -8,6 +8,16 @@ myheaders = {
     'accept' : "*/*"
 }
 
+#"a!b".split("!") --> ["a", "b"]
+def salary_converter(salary):
+    pass 
+    #1) если salary 120 000-160 000 руб.
+    # возвращает 140000
+    #2) если salary от 120 000 руб. / до 180 000 руб.
+    # возвращается 120000 / 180000
+    #3) если salary от 5 000 EUR 
+    # возвращается 400000
+
 session = requests.Session()
 req = session.get(url, headers=myheaders)
 if req.status_code == 200:
@@ -18,6 +28,6 @@ if req.status_code == 200:
         company = card.find("a", attrs={"data-qa":"vacancy-serp__vacancy-employer"}).text 
         salary = card.find("span", attrs={"data-qa":"vacancy-serp__vacancy-compensation"}).text 
 
-        print(title, company, salary)
+        print(title, company, salary_converter(salary))
 else:
     print("ERROR")
