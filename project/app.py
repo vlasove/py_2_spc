@@ -8,6 +8,7 @@ search_requet = input()
 BASE_URL="https://hh.ru/search/vacancy?area={}&clusters=true&enable_snippets=true&search_period=30&text={}&only_with_salary=true&from=cluster_compensation&showClusters=false&page=%i".format(region, search_requet)
 
 
+
 p = Parser(BASE_URL%(0))
 last_page = p.get_last_page()
 for j in tqdm(range(0, last_page + 1)):
