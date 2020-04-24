@@ -15,6 +15,8 @@ class Sequence:
 
 s = Sequence(input())
 print(s.get_answer())
+s.__init__("kek")
+print(s.get_answer())
 
 
 

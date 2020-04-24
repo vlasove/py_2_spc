@@ -5,4 +5,4 @@ for i in range(18):
     numbers.pop()
 
 
-Garbage Collector == сборщик мусора
+# Garbage Collector == сборщик мусора

@@ -11,7 +11,9 @@ class Film:
         left = self.duration - time_now
         return left 
 
-f = Film() + f.creator("LOTR" ,240)
+#f = Film() + f.creator("LOTR" ,240)
+f = Film()
+f.creator("HP",123)
 
 print(f.title, f.duration)
 

@@ -1,4 +1,5 @@
 class Film:
+    __tablename__ = "users"
     def __init__(self, TITLE = "" , DURATION = 0):
         self.title = TITLE
         self.duration = DURATION
